@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.metaDesc %>" />
+    <title>Leaderboad</title>
+</head>
+<body>
+    <header>
+        <h1>Leaderboard</h1>
+    </header>
+
+    <main>
+        <div id="score-head">
+            <h3>Recent scores</h3>
+            <button>Refresh</button>
+        </div>
+        <div id="scores-list">
+            <li>Adeola : 100</li>
+        </div>
+        <div id="form-container">
+            <form action="">
+                <ul>
+                    <li>
+                        <input id="user-name" type="text" placeholder="Enter name..." required>
+                    </li>
+                    <li>
+                        <input id="user-score" type="text" placeholder="Enter score..." required>
+                    </li>
+                    <li>
+                        <button id="add-score">Submit</button>
+                    </li>
+                </ul>
+                
+            </form>
+        </div>
+
+    </main>
+
+    <script type="module" src="/src/index.js"></script> 
+</body>
+</html>
