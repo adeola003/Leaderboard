@@ -1,21 +1,38 @@
 import './style.css';
+
 import {
-  addTask, loadFromStorage, add,
-  displayTasks, userEntry,
+  scoresList,
+  userNameInput,
+  userScoreInput,
+  refreshBtn,
+  submitBtn,
+  loadFromStorage,
+  updateStorage,
+  add,
+  display
 } from './functions.js';
 
 // load tasks from the storage
-
 loadFromStorage();
 
-// event listener to add new tasks
-addTask.addEventListener('click', () => {
-  const newDescription = userEntry.value;
-  if (newDescription !== '') {
-    add(newDescription);
+// event listener to add new scores
+submitBtn.addEventListener('click', () => {
+  const newName = userNameInput.value;
+  const newScore = userScoreInput.value;
+  if (newName !== '' && newScore !== '') {
+    add(newName, newScore);
+    console.log(scoresList);
   }
 });
 
 // display the tasks list
+display();
 
-displayTasks();
+//Event listenner to refresh the scores
+refreshBtn.addEventListener('click', () => {
+  let len = scoresList.length
+  scoresList.splice(0, len)
+  updateStorage(scoresList);
+  console.log(scoresList)
+  display();
+});

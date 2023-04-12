@@ -12,20 +12,27 @@
         <h1>Leaderboard</h1>
     </header>
 
-    <main>
-        <div id="score-head">
-            <h3>Recent scores</h3>
-            <button>Refresh</button>
+    <section class="main-container">
+        <div class="scores">
+            <div id="score-head">
+                <h3>Recent scores</h3>
+                <button id="refresh">Refresh</button>
+            </div>
+            <div >
+                <ul class="list" id="scores-list">
+                </ul>
+            </div>   
         </div>
-        <div id="scores-list"></div>
+
         <div id="form-container">
+            <h3>Enter your informations</h3>
             <form action="">
                 <ul>
                     <li>
                         <input id="user-name" type="text" placeholder="Enter name..." required>
                     </li>
                     <li>
-                        <input id="user-entry" type="text" placeholder="Enter score..." required>
+                        <input id="user-score" type="text" placeholder="Enter score..." required>
                     </li>
                     <li>
                         <button id="add-score">Submit</button>
@@ -35,8 +42,8 @@
             </form>
         </div>
 
-    </main>
+    </section>
 
     <script type="module" src="/src/index.js"></script> 
-<script defer src="runtime.js?0efcc0072cbc45f9afe9"></script><script defer src="main.js?0efcc0072cbc45f9afe9"></script></body>
+<script defer src="runtime.js?2b1eaeee737800f39193"></script><script defer src="main.js?2b1eaeee737800f39193"></script></body>
 </html>
