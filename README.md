@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>To do list</b></h3>
+  <h3><b>Leaderboard</b></h3>
 
 </div>
 
@@ -32,9 +32,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [To_do_list] <a name="about-project"></a>
+# 📖 [Leaderboard] <a name="about-project"></a>
 
-**[To_do_list]** This project is basic website that allows users to add/remove tasks from a to do from a list and used the webpack technology.
+**[Leaderboard]** This project is basic website that allows users to add scores from different users, built using HTML, CSS, Javascript and the webpack technology.
 
 ## 🛠 Built With <a name="HTML, CSS, Javascript and Webpack"></a>
 
@@ -63,7 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [https://adeola003.github.io/To_do_list_webpack/](#)
+- [Comming soon](#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,8 +87,8 @@ Open terminal on the same folder of the project and run:
 Clone this repository to your desired folder:
 
 ```sh
-  git https://github.com/adeola003/To_do_list_webpack.git
-  cd To_do_list_webpack
+  git https://github.com/adeola003/Leaderboard.git
+  cd Leaderboard
 ```
 
 ### Install
