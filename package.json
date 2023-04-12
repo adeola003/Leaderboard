@@ -285,6 +285,9 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1",
     "@babel/plugin-transform-modules-commonjs": "^7.21.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
