@@ -31,12 +31,16 @@ h1 {
 }
 
 .scores-box {
-  
+  border: 2px solid black;
 }
 
 #score-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.form-elements li {
+  margin-bottom: 10px;
 }
 
