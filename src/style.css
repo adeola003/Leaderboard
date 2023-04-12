@@ -7,7 +7,7 @@ ul {
 }
 
 h1 {
-  text-align: center
+  text-align: center;
 }
 
 #refresh {
@@ -27,7 +27,6 @@ h1 {
 
 .scoreLi:nth-child(even) {
   background-color: aqua;
-
 }
 
 .scores-box {
@@ -43,4 +42,3 @@ h1 {
 .form-elements li {
   margin-bottom: 10px;
 }
-

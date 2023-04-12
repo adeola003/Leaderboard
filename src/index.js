@@ -9,7 +9,7 @@ import {
   loadFromStorage,
   updateStorage,
   add,
-  display
+  display,
 } from './functions.js';
 
 // load tasks from the storage
@@ -28,11 +28,11 @@ submitBtn.addEventListener('click', () => {
 // display the tasks list
 display();
 
-//Event listenner to refresh the scores
+// Event listenner to refresh the scores
 refreshBtn.addEventListener('click', () => {
-  let len = scoresList.length
-  scoresList.splice(0, len)
+  const len = scoresList.length;
+  scoresList.splice(0, len);
   updateStorage(scoresList);
-  console.log(scoresList)
+  console.log(scoresList);
   display();
 });
