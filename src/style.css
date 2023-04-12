@@ -1,0 +1,44 @@
+body {
+  background-color: rgb(211, 219, 216);
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+#refresh {
+  height: 30px;
+}
+
+.main-container {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.scores {
+  width: 30vw;
+}
+
+.scoreLi:nth-child(even) {
+  background-color: aqua;
+}
+
+.scores-box {
+  border: 2px solid black;
+}
+
+#score-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form-elements li {
+  margin-bottom: 10px;
+}
