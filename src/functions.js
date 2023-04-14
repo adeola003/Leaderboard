@@ -1,10 +1,13 @@
 // eslint-disable-next-line
 let scoresList = [];
-const userNameInput = document.getElementById('user-name');
-const userScoreInput = document.getElementById('user-score');
+const userNameInput = document.getElementById('user-name').value;
+const userScoreInput = document.getElementById('user-score').value;
 const scoresElements = document.getElementById('scores-list');
 const refreshBtn = document.getElementById('refresh');
 const submitBtn = document.getElementById('add-score');
+const form = document.getElementById('form');
+const deolaId = 'anMeraym05fhThGgs8ur';
+const apiURL= 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 // add to local storage
 const updateStorage = (data) => {
