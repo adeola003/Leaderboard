@@ -9,6 +9,30 @@ const form = document.getElementById('form');
 const deolaId = 'anMeraym05fhThGgs8ur';
 const apiURL= 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
+//refactored funtion to send ne scores to the api
+// function to add new score
+const add = (newName, newScore) => {
+  const newScore = new Score(newName, newScore);
+  fetch(apiURL, {
+    method: 'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify(newScore)
+  })
+
+  .then((result) => result.json())
+  .then(() => {console.log('Leaderboard score created correctly'); })
+  .catch((error) => console.error(error));
+};
+
+
+
+
+
+
+
+
+
+
 // add to local storage
 const updateStorage = (data) => {
   localStorage.setItem('score-list', JSON.stringify(data));
@@ -22,13 +46,7 @@ class Score {
   }
 }
 
-// function to add new score
-const add = (newName, newScore) => {
-  const nex = new Score(newName, newScore);
-  scoresList.push(nex);
-  console.log(scoresList);
-  updateStorage(scoresList);
-};
+
 
 // function to display scores
 const display = () => {
