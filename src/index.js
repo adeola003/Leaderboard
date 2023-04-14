@@ -17,7 +17,6 @@ form.addEventListener('submit', async (event) => {
   await add(newName, newscore);
   userNameInput.value = '';
   userScoreInput.value = '';
-  await display();
 });
 
 // Event listenner to refresh the scores
