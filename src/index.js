@@ -10,29 +10,34 @@ import {
   updateStorage,
   add,
   display,
+  form
 } from './functions.js';
 
-// load tasks from the storage
-loadFromStorage();
+
 
 // event listener to add new scores
-submitBtn.addEventListener('click', () => {
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const nameInput = document.querySelector('#name');
+  const scoreInput = document.querySelector('#score');
   const newName = userNameInput.value;
-  const newScore = userScoreInput.value;
-  if (newName !== '' && newScore !== '') {
-    add(newName, newScore);
-    console.log(scoresList);
-  }
+  const newscore = userScoreInput.value;
+  await add(newName, newscore);
+  userNameInput.value = '';
+  userScoreInput.value = '';
+  await display();
 });
 
-// display the tasks list
-display();
+const reloadWindow = () => {
+  location.reload();
+};
+
 
 // Event listenner to refresh the scores
 refreshBtn.addEventListener('click', () => {
-  const len = scoresList.length;
-  scoresList.splice(0, len);
-  updateStorage(scoresList);
-  console.log(scoresList);
+  reloadWindow
   display();
 });
+
+
+
