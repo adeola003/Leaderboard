@@ -1,13 +1,10 @@
 import './style.css';
 
 import {
-  scoresList,
+
   userNameInput,
   userScoreInput,
   refreshBtn,
-  submitBtn,
-  loadFromStorage,
-  updateStorage,
   add,
   display,
   form
