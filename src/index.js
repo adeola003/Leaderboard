@@ -1,22 +1,17 @@
 import './style.css';
 
 import {
-
   userNameInput,
   userScoreInput,
   refreshBtn,
   add,
   display,
-  form
+  form,
 } from './functions.js';
-
-
 
 // event listener to add new scores
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const nameInput = document.querySelector('#name');
-  const scoreInput = document.querySelector('#score');
   const newName = userNameInput.value;
   const newscore = userScoreInput.value;
   await add(newName, newscore);
@@ -26,15 +21,12 @@ form.addEventListener('submit', async (event) => {
 });
 
 const reloadWindow = () => {
+  // eslint-disable-next-line
   location.reload();
 };
 
-
 // Event listenner to refresh the scores
 refreshBtn.addEventListener('click', () => {
-  reloadWindow
+  reloadWindow();
   display();
 });
-
-
-
