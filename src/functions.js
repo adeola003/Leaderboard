@@ -1,5 +1,4 @@
 // eslint-disable-next-line
-let scoresList = [];
 const userNameInput = document.getElementById('user-name').value;
 const userScoreInput = document.getElementById('user-score').value;
 const scoresElements = document.getElementById('scores-list');
@@ -9,11 +8,20 @@ const form = document.getElementById('form');
 const deolaId = 'anMeraym05fhThGgs8ur';
 const apiURL= 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
-//refactored funtion to send ne scores to the api
-// function to add new score
+// class to build scores object with methods to add or remove them from the table
+class Score {
+  constructor(name, score) {
+    this.name = name;
+    this.score = score;
+  }
+};
+
+
+//refactored funtion to send ne scores to the API
 const add = (newName, newScore) => {
   const newScore = new Score(newName, newScore);
-  fetch(apiURL, {
+  const completeURL =  `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${deolaId}/scores`;
+  fetch(completeURL, {
     method: 'POST',
     headers: {'content-type': 'application/json'},
     body: JSON.stringify(newScore)
@@ -24,33 +32,19 @@ const add = (newName, newScore) => {
   .catch((error) => console.error(error));
 };
 
-
-
-
-
-
-
-
-
-
-// add to local storage
-const updateStorage = (data) => {
-  localStorage.setItem('score-list', JSON.stringify(data));
+//function to get the stored data from the API
+const getData = async () => {
+  const response = await fetch(`${apiURL}/games/${deolaId}/scores/`);
+  const data = await response.json();
+  const scores = data.result.sort((a, b) => b.score - a.score);
+  return scores;
 };
-
-// class to build scores object with methods to add or remove them from the table
-class Score {
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
-  }
-}
-
 
 
 // function to display scores
 const display = () => {
   scoresElements.innerHTML = '';
+  const scoresList = getData();
   scoresList.forEach((item) => {
     const scoreLine = document.createElement('li');
     scoreLine.classList.add('scoreLi');
@@ -59,16 +53,8 @@ const display = () => {
   });
 };
 
-// load from storage
-const loadFromStorage = () => {
-  const storedScores = localStorage.getItem('score-list');
-  if (storedScores) {
-    scoresList = JSON.parse(storedScores);
-    display();
-  }
-};
-
 export {
-  scoresList, userNameInput, userScoreInput, refreshBtn, submitBtn,
-  loadFromStorage, updateStorage, add, display,
+  scoresList, userNameInput, userScoreInput,
+   refreshBtn, submitBtn,
+   add, display,
 };
