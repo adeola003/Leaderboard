@@ -20,13 +20,7 @@ form.addEventListener('submit', async (event) => {
   await display();
 });
 
-const reloadWindow = () => {
-  // eslint-disable-next-line
-  location.reload();
-};
-
 // Event listenner to refresh the scores
 refreshBtn.addEventListener('click', () => {
-  reloadWindow();
   display();
 });
