@@ -5,46 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Webpack Example Description" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <title>Leaderboad</title>
 </head>
 <body>
-    <header>
-        <h1>Leaderboard</h1>
-    </header>
-
-    <section class="main-container">
-        <div class="scores">
-            <div id="score-head">
-                <h3>Recent scores</h3>
-                <button id="refresh">Refresh</button>
+    <main>
+        <header>
+            <h1>Leaderboard</h1>
+        </header>
+    
+        <section class="main-container">
+            <div class="scores">
+                <div id="score-head">
+                    <h3>Recent scores</h3>
+                    <button id="refresh">Refresh</button>
+                </div>
+                <div class="scores-box" >
+                    <ul class="list" id="scores-list">
+                    </ul>
+                </div>   
             </div>
-            <div class="scores-box" >
-                <ul class="list" id="scores-list">
-                </ul>
-            </div>   
-        </div>
-
-        <div id="form-container">
-            <h3>Enter your informations</h3>
-            <form id="form" action="">
-                <ul class=" form-elements">
-                    <li>
-                        <input id="user-name" type="text" placeholder="Enter name..." required>
-                    </li>
-                    <li>
-                        <input id="user-score" type="text" placeholder="Enter score..." required>
-                    </li>
-                    <li>
-                        <button type="submit" id="add-score">Submit</button>
-                    </li>
-                </ul>
-                
-            </form>
-        </div>
-
-    </section>
+    
+            <div id="form-container">
+                <h3>Enter your informations</h3>
+                <form id="form" action="">
+                    <ul class=" form-elements">
+                        <li>
+                            <input id="user-name" type="text" placeholder="Enter name..." required>
+                        </li>
+                        <li>
+                            <input id="user-score" type="text" placeholder="Enter score..." required>
+                        </li>
+                        <li>
+                            <button type="submit" id="add-score">Submit</button>
+                        </li>
+                    </ul>
+                    
+                </form>
+            </div>
+    
+        </section>
+    </main>
+    <footer>2022</footer>
 
     <script type="module" src="/src/index.js"></script> 
-<script defer src="runtime.js?3ab50e43a1da851aea1d"></script><script defer src="main.js?3ab50e43a1da851aea1d"></script></body>
+<script defer src="runtime.js?64aca680f95179d63b1d"></script><script defer src="main.js?64aca680f95179d63b1d"></script></body>
 </html>
 
